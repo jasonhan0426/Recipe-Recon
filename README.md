@@ -1,51 +1,60 @@
-# ember-quickstart
+# Recipe Recon
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+## Description
 
-## Prerequisites
+This site provides basic function of web application for users to sign in, search for recipe from a 3rd party API (yummly.com), and favorite recipes
 
-You will need the following things properly installed on your computer.
+## Authors
 
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with NPM)
-* [Ember CLI](https://ember-cli.com/)
-* [Google Chrome](https://google.com/chrome/)
+* [dhoang1csuf](https://github.com/dhoang1csuf) - Daniel Hoang
+* [gerardco](https://github.com/gerardco) - Gerard Cortes
+* [jasonhan0426](https://github.com/jasonhan0426) - Jason Han
+* [philipchungtech](https://github.com/philipchungtech) - Philip Chung
+* [shelleypham](https://github.com/shelleypham) - Shelley Pham
 
 ## Installation
 
 * `git clone <repository-url>` this repository
-* `cd ember-quickstart`
+* `cd <repository>`
 * `npm install`
 
-## Running / Development
+### Build With Plugins
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+What things you need to install to run the software:
 
-### Code Generators
+```
+$ ember install emberfire
+$ ember install torii
+```
 
-Make use of the many generators for code, try `ember help generate` for more details
+## Deployment
 
-### Running Tests
+```
+$ ember serve
+```
 
-* `ember test`
-* `ember test --server`
+once loaded, open browser and open up a page with link: http://localhost:4200/
 
-### Building
+The first thing you will see is a page like this where you can login at the top right corner and do a search of recipe at the bottom
+<br>
+<img height="250" src="https://github.com/cpsc473p2g/documentation/blob/master/home.PNG">
+<br>
+You can search recipe in the search box and that will pull data from a third part (yummly.com)
+For example, when searching eggs, you will get a list of recipe that includes ingrediant eggs with that model that looks like this.
+Note that the "Add to my Favorites" button which will be saving data to our database hosted on firebase
+<br>
+<img height="400" src="https://github.com/cpsc473p2g/documentation/blob/master/egg.PNG">
+<br>
+Once you are login, notice at top left corner there is an extra "My Favorite Recipes" button
+<br>
+<img height="50" src="https://github.com/cpsc473p2g/documentation/blob/master/favorite.PNG">
+<br>
+For every recipes you added to my Favorites will be shown here
+<br>
+<img height="400" src="https://github.com/cpsc473p2g/documentation/blob/master/MyFavorite.PNG">
+<br>
 
-* `ember build` (development)
-* `ember build --environment production` (production)
+## Acknowledgments
 
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+* [emberfire](https://github.com/firebase/emberfire)
+* [torii](https://github.com/Vestorly/torii)
