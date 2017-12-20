@@ -1,0 +1,25 @@
+{{outlet}}
+
+<h1>My Favorite Recipes</h1>
+
+<!--<button type="button" class="btn btn-secondary btn-lg">{{#link-to 'favorites.new'}}Add Favorite{{/link-to}}</button>
+-->
+
+{{#each model as |favorite|}}
+{{#if (eq favorite.uid session.currentUser.email)}}
+  <div class="well">
+    <h4>{{#link-to 'favorites.edit' favorite.id}}{{favorite.title}}{{/link-to}}</h4>
+    <div>From <a href="{{favorite.source}}">{{favorite.sitename}}</a></div>
+    <a href="{{favorite.source}}"><img src="{{favorite.image}}" alt=""/></a>
+    <button {{action 'deleteTask' favorite.id}} class="btn btn-danger">Delete</button>
+  </div>
+  {{/if}}
+{{/each}}
+
+<!--
+title: DS.attr('string'),
+sitename: DS.attr('string'),
+source: DS.attr('string'),
+image: DS.attr('string')
+*/
+-->
